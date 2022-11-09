@@ -1,0 +1,74 @@
+wandb_version: 1
+
+_content:
+  desc: null
+  value:
+    agent: '{''name'': ''softq'', ''class'': ''agent.softq.SoftQ'', ''obs_dim'': ''???'',
+      ''action_dim'': ''???'', ''critic_cfg'': ''${q_net}'', ''critic_lr'': 0.0001,
+      ''critic_betas'': [0.9, 0.999], ''init_temp'': 0.001, ''critic_target_update_frequency'':
+      1000, ''critic_tau'': 0.1}'
+    cuda_deterministic: 'False'
+    device: cpu
+    env: '{''replay_mem'': 200000, ''initial_mem'': 5000, ''eps_steps'': 1000000.0,
+      ''eps_window'': 10, ''learn_steps'': 1000000.0, ''eval_interval'': 5000.0, ''from_pixels'':
+      False, ''name'': ''BreakoutNoFrameskip-v4'', ''demo'': ''BreakoutNoFrameskip-v4_30.pkl''}'
+    eval: '{''policy'': None, ''threshold'': None, ''use_baselines'': True, ''eps'':
+      10, ''transfer'': False, ''expert_env'': ''''}'
+    eval_only: 'False'
+    exp_name: ''
+    expert: '{''demos'': 20, ''subsample_freq'': 1}'
+    gamma: '0.99'
+    hydra_base_dir: /Users/jackwu/Project/Python/ML assignment/IQ-Learn/iq_learn/outputs/2022-11-08/14-06-45
+    log_dir: logs/
+    log_interval: '100'
+    method: '{''type'': ''iq'', ''loss'': ''value_expert'', ''constrain'': False,
+      ''grad_pen'': False, ''chi'': True, ''tanh'': False, ''regularize'': False,
+      ''div'': None, ''alpha'': 0.5, ''lambda_gp'': 10, ''mix_coeff'': 1}'
+    num_actor_updates: '1'
+    num_seed_steps: '0'
+    offline: 'False'
+    only_expert_states: 'False'
+    pretrain: None
+    project_name: ${env.name}
+    q_net: '{''_target_'': ''agent.softq_models.AtariQNetwork'', ''obs_dim'': ''${agent.obs_dim}'',
+      ''action_dim'': ''${agent.action_dim}''}'
+    save_interval: '5'
+    seed: '0'
+    train: '{''batch'': 64, ''use_target'': False, ''soft_update'': False}'
+_metadata:
+  desc: null
+  value: 'ContainerMetadata(ref_type=<class ''dict''>, object_type=None, optional=True,
+    key=None, flags={''struct'': True}, resolver_cache=defaultdict(<class ''dict''>,
+    {''now'': {''%Y-%m-%d'': ''2022-11-08'', ''%H-%M-%S'': ''14-06-45''}}), key_type=None,
+    element_type=None)'
+_parent:
+  desc: null
+  value: null
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.13.5
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.9.12
+    start_time: 1667887607.714384
+    t:
+      1:
+      - 1
+      - 41
+      - 50
+      - 55
+      2:
+      - 1
+      - 41
+      - 50
+      - 55
+      3:
+      - 16
+      - 23
+      - 35
+      4: 3.9.12
+      5: 0.13.5
+      8:
+      - 5

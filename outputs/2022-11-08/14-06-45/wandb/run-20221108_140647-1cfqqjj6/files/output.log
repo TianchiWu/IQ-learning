@@ -1,0 +1,13 @@
+
+--> Using Soft-Q agent
+Traceback (most recent call last):
+  File "/Users/jackwu/Project/Python/ML assignment/IQ-Learn/iq_learn/train_iq.py", line 84, in main
+    expert_memory_replay.load(hydra.utils.to_absolute_path(f'experts/{args.env.demo}'),
+  File "/Users/jackwu/Project/Python/ML assignment/IQ-Learn/iq_learn/dataset/memory.py", line 44, in load
+    data = ExpertDataset(path, num_trajs, sample_freq, seed)
+  File "/Users/jackwu/Project/Python/ML assignment/IQ-Learn/iq_learn/dataset/expert_dataset.py", line 38, in __init__
+    all_trajectories = load_trajectories(expert_location, num_trajectories, seed)
+  File "/Users/jackwu/Project/Python/ML assignment/IQ-Learn/iq_learn/dataset/expert_dataset.py", line 129, in load_trajectories
+    raise ValueError(f"{expert_location} is not a valid path")
+ValueError: /Users/jackwu/Project/Python/ML assignment/IQ-Learn/iq_learn/experts/BreakoutNoFrameskip-v4_30.pkl is not a valid path
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
