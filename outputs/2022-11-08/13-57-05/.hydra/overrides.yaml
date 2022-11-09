@@ -1,6 +1,0 @@
-- agent=softq
-- env=breakout
-- agent.init_temp=1e-3
-- method.loss=value_expert
-- method.chi=True
-- seed=0
