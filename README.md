@@ -40,7 +40,7 @@ python train_iq.py agent=softq method=iq env=cartpole expert.demos=1 expert.subs
 
 IQ-Learn is the only method thats reaches the expert env reward of **500** (requiring only 3k training steps and less than 30 secs!!)
 
-<img src="../docs/cartpole_example.png" width="500"> 
+<img src="./docs/cartpole_example.png" width="500"> 
 
 ### 2. Playing Pong at human performance
 
@@ -51,7 +51,7 @@ python train_iq.py agent=softq env=pong agent.init_temp=1e-3 method.loss=value_e
 Again, IQ-Learn is the only method thats reaches the expert env reward of **21** <br>
 (we find better hyperparams compared to the original paper)
 
-<img src="../docs/pong_example.png" width="500"> 
+<img src="./docs/pong_example.png" width="500"> 
 
 
 
@@ -63,7 +63,7 @@ python train_iq.py env=humanoid agent=sac expert.demos=1 method.loss=v0 method.r
 
 IQ-Learn learns to control a full humanoid at expert performance using a single demonstration reaching the expert env reward of **5300** <br>
 
-<img src="../docs/humanoid_example.png" width="500"> 
+<img src="./docs/humanoid_example.png" width="500"> 
 
 ## Instructions
 We show example code for training Q-Learning and SAC agents with **IQ-Learn** in `train_iq`.py. We make minimum modifications to original RL training code present in `train_rl`.py and simply change the critic loss function.
@@ -87,3 +87,9 @@ The code is made available for academic, non-commercial usage. Please see the [L
 For any inquiry, contact: Div Garg ([divgarg@stanford.edu](mailto:divgarg@stanford.edu?subject=[GitHub]%IQ-Learn))
 
 
+## Reproduce Atari experiments
+
+We followed the instruction and reproduced the Atari breakout experiment. In limited time, we achieved a
+best reward, over 200.
+
+<img src="./docs/breakout.png" width="500"> 
